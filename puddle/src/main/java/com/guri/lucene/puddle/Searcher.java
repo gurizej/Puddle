@@ -22,10 +22,11 @@ public class Searcher {
 	IndexSearcher indexSearcher;
 	QueryParser queryParser;
 	Query query;
+	DirectoryReader ireader;
 
 	public Searcher(String indexDirectoryPath) throws IOException {
 		Directory indexDirectory = FSDirectory.open(Paths.get(indexDirectoryPath));
-		DirectoryReader ireader = DirectoryReader.open(indexDirectory);
+		ireader = DirectoryReader.open(indexDirectory);
 		indexSearcher = new IndexSearcher(ireader);
 		queryParser = new QueryParser(LuceneConstants.CONTENTS, new StandardAnalyzer());
 	}
@@ -40,6 +41,6 @@ public class Searcher {
 	}
 	
 	public void close() throws IOException {
-		((Closeable) indexSearcher).close();
+		ireader.close();
 	}
 }

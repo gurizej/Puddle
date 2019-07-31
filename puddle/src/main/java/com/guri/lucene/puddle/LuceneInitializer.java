@@ -35,6 +35,6 @@ public class LuceneInitializer {
 			Document doc = searcher.getDocument(scoreDoc);
 			System.out.println("File: " + doc.get(LuceneConstants.FILE_PATH));
 		}
-		//searcher.close();
+		searcher.close();
 	}
 }
