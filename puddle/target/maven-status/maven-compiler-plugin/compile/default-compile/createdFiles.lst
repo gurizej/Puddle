@@ -1,0 +1,7 @@
+com/guri/lucene/puddle/Indexer.class
+com/guri/lucene/puddle/LuceneTester.class
+com/guri/lucene/puddle/TextFileFilter.class
+com/guri/lucene/puddle/PuddleApplication.class
+com/guri/lucene/puddle/LuceneConstants.class
+com/guri/lucene/puddle/IndexableFieldTypeOptions.class
+com/guri/lucene/puddle/Searcher.class
